@@ -30,5 +30,4 @@ dist/
 .DS_Store
 Thumbs.db
 
-*.txt
-todo
+peer
