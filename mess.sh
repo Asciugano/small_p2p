@@ -1,6 +1,19 @@
+help() {
+  echo "┌────────────────────────────────────────────────────────────────────────────────┐"
+  echo "│./mess.sh [messaggio] [porta] <opzione>                                         │"
+  echo "│./mess.sh [messaggio] [porta] <-c | --curl>   | Invia il messaggio tramite curl │"
+  echo "└────────────────────────────────────────────────────────────────────────────────┘"
+}
+
+if [[ $# -eq 1 ]]; then
+  if [[ $1 -eq "-h" || $1 == "--help" ]]; then
+    help
+  fi
+fi
+
 if [[ $# -lt 2 ]]; then
   echo "Devi inserire messaggio e porta"
-  echo "./mess.sh 'ciao come stai' 5001"
+  echo "guarda -h"
   exit 1
 fi
 
